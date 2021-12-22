@@ -52,6 +52,16 @@ const Header = ({ user, handleFilter, search, handleSearch }) => (
 		</Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />
 		<Navbar.Collapse style={{'padding-top':'5px', 'justify-content':'right'}} id='basic-navbar-nav'>
+		<Nav.Link>
+			{/* <----- SEARCH BAR -----> */}
+			<Link style={{'text-decoration':'none'}} to="/problems">
+				<FilterProblem
+					filterProblems={handleFilter}
+					searchVal={search}
+					searchChange={handleSearch}
+				/>
+			</Link>
+		</Nav.Link>
 			{/* <----- USER PROFILE -----> */}
 			<Nav className='ml-auto'>
 				{user && (
@@ -62,16 +72,6 @@ const Header = ({ user, handleFilter, search, handleSearch }) => (
 				{user ? authenticatedOptions : unauthenticatedOptions}
 			</Nav>
 		</Navbar.Collapse>
-		<Nav.Link className='mx-4'>
-			{/* <----- SEARCH BAR -----> */}
-			<Link style={{'text-decoration':'none'}} to="/problems">
-				<FilterProblem
-					filterProblems={handleFilter}
-					searchVal={search}
-					searchChange={handleSearch}
-				/>
-			</Link>
-		</Nav.Link>
 	</Navbar>
 )
 
