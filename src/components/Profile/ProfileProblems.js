@@ -20,7 +20,11 @@ function ProfileProblems(props) {
 
     console.log('this is user problems', props.user.problems)
 
-    const allProblems = props.user.problems.map((p, i) => {
+    // const allProblems = props.user.problems.map((p, i) => {
+
+    //     const descriptionSnippet = p.description.split('</p>')[0]
+
+    const allProblems = props.userProblems.filter((p, i) => i > props.userProblems.length - 5).reverse().map((p, i) => {
 
         const descriptionSnippet = p.description.split('</p>')[0]
 
@@ -30,34 +34,35 @@ function ProfileProblems(props) {
                 <Card.Body>
                     <Card.Title>{p.title}</Card.Title>
                     <Card.Text>
-                    <ReactQuill 
-                        value={descriptionSnippet}
-                        readOnly={true}
-                        theme={"bubble"}
-                        modules={modules}
+                        <ReactQuill
+                            value={descriptionSnippet}
+                            readOnly={true}
+                            theme={"bubble"}
+                            modules={modules}
                         />
                     </Card.Text>
                     <Link to={`/problems/${p._id}`}
                         currProblem={props.currentProblem}>
-                        <Button 
+                        <Button
                             id='profileProblemBtn'
-                            className="float-end" 
-                            size="small" 
-                            variant="primary" 
+                            className="float-end"
+                            size="small"
+                            variant="primary"
                             onClick={() => changeCurrent(p)} key={i}>
-                                Go to problem
+                            Go to problem
                         </Button>
                     </Link>
                 </Card.Body>
             </Card>
         )
+
     })
-    
-    return (
-        <div>
-            {allProblems}
-        </div>
-    )
+
+return (
+    <div>
+        {allProblems}
+    </div>
+)
 }
 
 export default ProfileProblems

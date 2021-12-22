@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Form, Accordion, Button } from 'react-bootstrap'
-import { postAnswer } from '../../api/answers'
+import { Accordion, Button } from 'react-bootstrap'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 
+import { postAnswer } from '../../api/answers'
 
 export default function NewAnswer(props) {
+
     const [value, setValue] = useState('')
 
     const createAnswer = () => {
@@ -19,7 +20,6 @@ export default function NewAnswer(props) {
                 console.error(err)
             })
     }
-
 
     let modules = {
         syntax: true,

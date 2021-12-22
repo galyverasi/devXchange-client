@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 /* <---------- MULTIPLE FILES ----------> */
 #root{
@@ -14,12 +13,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-#cardBtn, #formBtn, #signInBtn, #signUpBtn, #signOutBtn, #editProblemBtn, #deleteProblemBtn, #profileProblemBtn, #dashboardPill {
+#cardBtn, #formBtn, #signInBtn, #signUpBtn, #signOutBtn, #editProblemBtn, #deleteProblemBtn, #profileProblemBtn, #dashboardPill, #changePwBtn, #editProbBtn, #cancelEditBtn {
   background-color:#055861;
   border-color: #055861;
 }
 
-#cardBtn:hover, #formBtn:hover, #signInBtn:hover, #signUpBtn:hover, #signOutBtn:hover, #gitHubLink:hover, #editProblemBtn:hover, #deleteProblemBtn:hover, #profileProblemBtn:hover {
+#cardBtn:hover, #formBtn:hover, #signInBtn:hover, #signUpBtn:hover, #signOutBtn:hover, #gitHubLink:hover, #editProblemBtn:hover, #deleteProblemBtn:hover, #profileProblemBtn:hover, #changePwBtn:hover, #editProbBtn:hover, #cancelEditBtn:hover {
   background-color:  #099DAD;
   border: 2px solid #099DAD;
 }
@@ -51,6 +50,9 @@ a:link {
   text-decoration: none;
 }
 
+Link{
+  color: #055861;
+}
 /* <---------- HOME.JS ----------> */
 #homePage {
   text-align: center;
@@ -100,7 +102,7 @@ a:link {
 }
 
 /* <---------- SIGNIN.JS ----------> */
-#signInForm, #signUpForm {
+#signInForm, #signUpForm, #changePwForm {
   max-width: 50%;
 }
 
@@ -209,6 +211,38 @@ a:link {
   justify-content: end;
 }
 
+/* <---------- PROFILE.JS ----------> */
+#mainProfile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#profileProbCards {
+  max-width: 100%;
+  
+}
+
+#profileListContainer {
+  height: 250px;
+  border-color: #055861;
+  margin-top: 30px;
+}
+
+#profileListHeader {
+  background-color: #055861;
+  color: white;
+}
+
+#profileListBody{
+  overflow: scroll;
+}
+
+/* <---------- SIGNOUT.JS ----------> */
+#signOutBtns {
+  margin-top: -250px;
+}
+
 /* <---------- FOOTER.JS ----------> */
 footer {
   margin-top: 20%;
@@ -218,4 +252,10 @@ footer {
   background-color: #212529;
   padding: 20px 20px 20px 20px;
   margin: 0 50px 0 50px;
+}
+
+/* <---------- CHANGEPASSWORD.JS ----------> */
+#changePwForm {
+  padding-top: 75px;
+  margin: auto;
 }
