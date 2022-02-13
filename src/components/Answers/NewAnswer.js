@@ -33,13 +33,11 @@ export default function NewAnswer(props) {
     }
 
     return (
-        <div style={{ 'margin-left': '32px' }}>
+        <div id='newAnswerContainer' style={{ 'margin-left': '32px' }}>
             {props.user && props.user._id != props.currentProblem.owner._id &&
                 <Accordion id='newAnswer' defaultActiveKey="0" flush>
                     <Accordion.Item eventKey="0">
-                        <>
-                            <Accordion.Header>Post Your Answer</Accordion.Header>
-
+                            <Accordion.Header id='postAnswerHeader' style={{ 'background-color': '#055861' }}>Post Your Answer</Accordion.Header>
                             <Accordion.Body>
                                 <ReactQuill
                                     style={{ 'height': '100%' }}
