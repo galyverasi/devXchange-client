@@ -50,7 +50,7 @@ const Header = ({ user, handleFilter, search, handleSearch }) => (
 				DevXchange
 			</Link>
 		</Navbar.Brand>
-		<Navbar.Toggle aria-controls='basic-navbar-nav' />
+		<Navbar.Toggle aria-controls='basic-navbar-nav'/>
 		<Navbar.Collapse style={{'padding-top':'5px', 'justify-content':'right'}} id='basic-navbar-nav'>
 		<Nav.Link>
 			{/* <----- SEARCH BAR -----> */}

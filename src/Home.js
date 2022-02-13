@@ -18,17 +18,16 @@ const Home = (props) => {
 
 	return (
 		<main id='homePage'>
-			<header id='homeHeader'>
-				<h1 id='welcome'>Welcome to</h1>
-				<h1 id='appTitle'>DevXchange</h1>
-			</header>
+			<div class='container'>
+				<h1 id='appTitle'> DevXchange</h1>
+			</div>
 			<Typewriter
 				options={{
 					strings: ['An open forum', 'Post coding questions', 'Offer your expertise', 'Connect with other developers'],
 					autoStart: true,
 					loop: true,
 				}}
-				id='homeTypewriter'
+				// id='homeTypewriter'
 			/>
 			<a id="cardBtn" href="/problems" class="btn btn-primary">Search Problems</a>
 		</main>
